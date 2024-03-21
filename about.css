@@ -1,0 +1,246 @@
+* {
+    padding:0;
+    margin:0;
+}
+body {
+    background-color: #000000;
+}
+header {
+    background-color:rgba(35,28,26,0.8);
+    height:80px;
+    width:100%;
+    position:fixed;    
+    z-index: 9999;
+}
+header h1 img {
+    position: absolute;
+    left: -70px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    line-height: 80px;
+}
+
+h1 {
+    color:white;
+    position:absolute;
+    left:110px;
+    top:0;
+    line-height: 80px;
+    background-repeat: no-repeat;
+    width:500px;
+    text-indent: 0px; 
+}
+header ul {
+    position:absolute;
+    right:0vw;
+    top:0;
+    line-height:80px;
+}
+header li {
+    display:inline;
+    margin-right:4vw;    
+}
+header a {
+    color:white;
+    text-decoration: none;
+}
+header a:hover {
+    text-decoration: underline;
+}
+header nav ul li {
+    position: relative;
+    white-space: nowrap;
+}
+header nav ul > li:last-child {
+    border-right: none;
+}
+header ul > li {
+    float: left;
+}
+
+header ul a {
+    background-color: transparent;
+    color: #fff;
+    display: block;
+    padding: 0 0px;
+    text-decoration: none;
+    line-height: 80px;
+}
+header nav ul ul {
+    background-color:rgba(35,28,26,0.8);
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 100%;
+    min-width: 160px;
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+header nav ul ul li:last-child {
+    border-bottom: none;
+}
+header nav ul ul {
+    display: none;
+}
+header nav ul li:hover > ul{
+    display: block;
+}
+header nav ul ul li a {
+    padding-left: 18px; 
+}
+.menu {
+    display:none;
+}
+.login-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -160px;
+    background-color: rgba(35,28,26,0.8);
+    padding: 10px;
+    width: 200px;
+}
+.login-menu input {
+    display: block; 
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.login-menu button {
+    display: block;
+    margin: 5px 10px 10px 5px;
+    padding: 10px;
+    width: calc(100% - 10px); 
+    box-sizing: border-box;
+    border: none; 
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+#loginButton {
+    margin-top: 40px;
+}
+.login-menu p {
+    color: white;
+}
+
+.product {
+    display: flex;
+    background-color: #AEAE98;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 250px 80px;
+    height: 400px;
+}
+.product h2 {
+    font-weight: bold;
+    text-align: center;
+}
+.product > div {
+    width: 300px;
+    text-align: left;
+    padding: 20px;
+    margin-top: 80px;
+}
+.product > div:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+.product h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.product p {
+    font-size: 14px;
+    line-height: 1.6em;
+    border-bottom: 1px dashed #fff;
+}
+.product button {
+    background-color: #AEAE98;
+    color: #fff; 
+    border: none; 
+    padding: 8px 15px;
+    border-radius: 5px; 
+    cursor: pointer; 
+    position: relative;
+    left: calc(100% - 85px);
+
+}
+.product button:hover {
+    text-decoration: underline;
+}
+
+/* .newsletter */
+.newsletter {
+    background-color:#2D2D24;
+    color:white;
+    padding:60px 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newsletter p { 
+    margin-bottom: 20px;
+}
+.newsletter input, .newsletter button {
+    background-color: transparent;
+    color:white;
+    border: 1px solid #2D2D24; 
+    padding: 10px; 
+    border-radius: 5px;;
+}
+.newsletter input {
+    width:200px;
+    margin-right: 15px;;
+}
+.newsletter button {
+    width:80px;
+    cursor:pointer;
+}
+
+/* footer */
+footer {
+    background-color:#090905;
+    color:#B7B7B7;
+    height:60px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1450px) {
+    header h1 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    header h1 img {
+        left: calc(50% - 320px); 
+        transform: translateY(-50%);
+    }
+    header ul {
+        display:none;
+    }
+    .news h2 {
+        font-size:40px;
+    }
+    .menu {
+        display:block;
+        background-color: transparent;
+        color:white;
+        font-size: 40px;
+        position:absolute;
+        top:15px;
+        left:20px;
+        border:none;
+        cursor: pointer;
+    }
+    .product {
+        flex-direction: column;
+        padding: 60px 0;
+    }
+    .product div {
+        margin-bottom: 30px;
+    }
+}
